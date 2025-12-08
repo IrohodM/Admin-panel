@@ -1,0 +1,13 @@
+@media(max-width: 1200px){
+    #navbar_brand {
+        width: 65px !important;
+        height: 45px !important;
+        margin-top: 3px;
+    }
+
+    .form-switch .form-check-input {
+        width: 1.7rem;
+        height: 1.1rem;
+        margin-top: 15px !important;
+    }
+}

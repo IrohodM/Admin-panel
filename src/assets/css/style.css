@@ -1,0 +1,171 @@
+@font-face{
+    font-family: "BYekan";
+    src: url("../fonts/yekan/BYekan-webfont.eot") format("eot"),
+        url("../fonts/yekan/BYekan-webfont.woff") format("woff"),
+        url("../fonts/yekan/BYekan-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: "BYekan";
+    direction: rtl;
+    text-align: right;
+    /* box-sizing: content-box */
+}
+
+body {
+  margin: 0;
+  display: block; /* not flex */
+  min-height: 100vh;
+}
+
+
+/* general start */
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.w-15{
+    width: 15%;
+}
+
+body{
+    display: flex;
+}
+
+.text_center{
+    text-align: center !important;
+}
+
+
+
+/* general end */
+
+/* navbar start */
+.top_navbar{
+    height: 45px;
+}
+
+#navbar_brand{
+    width: 60px;height: 40px;
+}
+
+.form-switch .form-check-input{
+    margin-top: 13px;
+}
+
+#navbar-brand{
+    transition: var(--transition_300);
+    filter: drop-shadow(0 0 6px white);
+    -webkit-filter: drop-shadow(0 0 6px white);
+}
+
+#navbar-brand:hover{
+    filter: drop-shadow(0 0 3px white);
+    -webkit-filter: drop-shadow(0 0 3px white);
+}
+/* navbar end */
+
+/* aside start */
+
+/* .mini_sidebar{
+    font-size: .7rem;
+} */
+
+.mini_sidebar {
+  font-size: .7rem;
+  display: block; /* remove flex centering */
+}
+
+
+#profile_img{
+    height: 60px;
+    width: 60px !important;
+}
+
+#sidebar_section {
+  transition: all 0.3s ease;
+  height: auto;
+  /* overflow-y: auto; */
+  /* overflow: visible; */
+}
+
+#sidebar_section.collapsed {
+  width: 100px; /* narrow sidebar */
+}
+
+#sidebar_section.collapsed span {
+  display: none; /* hide text labels */
+}
+
+#sidebar_section.collapsed img {
+  width: 60px; /* shrink profile image if needed */
+  height: 60px;
+  /* margin-top: 60px; */
+}
+
+#sidebar_section ul #li_1{
+    padding-top: 45px;
+}
+
+#sidebar_section.collapsed ul #li_1{
+    padding-top: 45px;
+    color: red;
+}
+
+#sidebar_section ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  height: 15px;
+  cursor: pointer;
+  /* height: 25px; */
+  padding: 0 10px;
+  /* transition: background 0.3s, color 0.3s; */
+}
+
+#sidebar_section li:hover{
+    background-color: black;
+    border-bottom: 3px red solid;
+    border-radius: 9px;
+}
+
+#sidebar_section ul li.no_hover:hover {
+  background-color: inherit;
+  border: none;
+  border-radius: 0;
+  cursor: default;
+}
+
+#sidebar_section.collapsed ul li {
+  justify-content: center; /* center icons when collapsed */
+  height: 15px;
+}
+
+#sidebar_section ul li i {
+  width: 30px; /* fixed icon area */
+  text-align: center;
+}
+
+/* #sidebar_section {
+  height: 100vh; 
+} */
+
+
+
+
+/* aside end */
+
+#main {
+    flex: 1; /* take the remaining space */
+    background: lightgray;
+}
+
+
+
+
+
+
+
+
