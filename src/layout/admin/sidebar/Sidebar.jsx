@@ -1,41 +1,225 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CollapseContext } from "../../../context/CheckCollapseContext";
 // import { AdminContext } from "../../../context/adminLayoutContext";
 
 const Sidebar = () => {
 
+    const {collapse , toggleCollapse} = useContext(CollapseContext);
     // const {showSidebar} = useContext(AdminContext)
     return (
         <>
                     {/* <!-- main start --> */}
             <div id="main">
-                <div className="row container-fluid p-0 mt-4">
 
-                    {/* <!-- aside start --> */}
-                    <div id="sidebar_section" className="col-4 ">
-                        <div className="bg-warning">
-                            hello world
-                            hello world
-                            hello world
-                            hello world
-                            hello world
-                            hello world
-                            hello world
-                            hello world
-                            hello world
+                <div className=" container-fluid">
+
+                    <div className="row">
+                        {/* aside */}
+                        {/* <div className="bg-warning col-3 d-flex flex-column" id="my_aside"> */}
+                        <div id="my_aside" className={`bg-warning d-flex flex-column ${collapse ? "d-none" : "col-3"}`}>
+                            <ul className="p-0 m-0 mt-5 list-unstyled text-white">
+                                <li className="d-flex flex-column justify-content-center align-items-center no_hover pb-5">
+                                    <img src="/assets/img/face.png" alt="" className="rounded-circle border border-3"
+                                        id="profile_img" />
+                                    <span>امیرمحمد محسنی</span>
+                                </li>
+                                <li className="py-4 pb-2" id="li_1">
+                                    <i className="bi bi-speedometer me-2"></i>
+                                    <span>داشبورد</span>
+                                </li>
+
+                                {/* <!-- li part 2 --> */}
+                                <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
+                                    <span>فروشگاه</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-collection me-2"></i>
+                                    <span>مدیریت گروه محصول</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-box me-2"></i>
+                                    <span>مدیریت محصول</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-check-circle me-2"></i>
+                                    <span>مدیریت برند ها</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-flower1 me-2"></i>
+                                    <span>مدیریت گارانتی ها</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-palette me-2"></i>
+                                    <span>مدیریت رنگ ها</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-percent me-2"></i>
+                                    <span>مدیریت تخفیف ها</span>
+                                </li>
+
+                                {/* <!-- li part3 --> */}
+                                <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
+                                    <span>سفارشات و سبد ها</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-basket me-2"></i>
+                                    <span>مدیریت سبد ها</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-cart-check-fill me-2"></i>
+                                    <span>مدیریت سفارشات</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-truck me-2"></i>
+                                    <span>مدیریت نحوه ارسال</span>
+                                </li>
+
+                                {/* <!-- li part4 --> */}
+                                <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
+                                    <span>کاربران و همکاران</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-people me-2"></i>
+                                    <span>مشاهده کاربران</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-person-bounding-box me-2"></i>
+                                    <span>نقش ها</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-shield-fill-check me-2"></i>
+                                    <span>مجوز ها</span>
+                                </li>
+
+                                {/* <!-- li part5 --> */}
+                                <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
+                                    <span>ارتباطات</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-question-diamond me-2"></i>
+                                    <span>سوال ها</span>
+                                </li>
+                                <li className="py-4 py-md-4 py-lg-3">
+                                    <i className="bi bi-chat-left-dots-fill me-2"></i>
+                                    <span>نظرات</span>
+                                </li>
+
+
+
+                            </ul>
+                        </div>
+
+                        <div id="my_aside_collapsed" className={`bg-warning d-flex flex-column ${collapse ? "col-1" : "d-none"}`}>
+                            <div className="row">
+                                <div className="col-8">
+                                    <ul className="p-0 m-0 mt-5 text-center list-unstyled text-white">
+                                        <li className="d-flex flex-column justify-content-center align-items-center no_hover pb-5">
+                                            <img src="/assets/img/face.png" alt="" className="rounded-circle border border-3"
+                                                id="profile_img" />
+                                            <span>امیرمحمد محسنی</span>
+                                        </li>
+                                        <li className="py-4 pb-2" id="li_1">
+                                            <i className="bi bi-speedometer me-2"></i>
+                                        </li>
+
+                                        {/* <!-- li part 2 --> */}
+                                        <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
+                                            <span>       </span>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-collection me-2"></i>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-box me-2"></i>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-check-circle me-2"></i>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-flower1 me-2"></i>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-palette me-2"></i>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-percent me-2"></i>
+                                        </li>
+
+                                        {/* <!-- li part3 --> */}
+                                        <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
+                                            <span>     </span>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-basket me-2"></i>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-cart-check-fill me-2"></i>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-truck me-2"></i>
+                                        </li>
+
+                                        {/* <!-- li part4 --> */}
+                                        <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
+                                            <span>      </span>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-people me-2"></i>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-person-bounding-box me-2"></i>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-shield-fill-check me-2"></i>
+                                        </li>
+
+                                        {/* <!-- li part5 --> */}
+                                        <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
+                                            <span>    </span>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-question-diamond me-2"></i>
+                                        </li>
+                                        <li className="py-4 py-md-4 py-lg-3">
+                                            <i className="bi bi-chat-left-dots-fill me-2"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="col-4 bg-danger">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div className={collapse ? "col-2" : "d-none"}></div>
+                        {/* <div
+                            id="my_aside"
+                            className={`bg-warning d-flex flex-column ${collapsed ? "col-1" : "col-3"}`}
+                        >
+                            
+                            {!collapsed && (
+                                <>
+                                    <div>div1</div>
+                                    <div>div2</div>
+                                    <div>div3</div>
+                                    <div>div4</div>
+                                </>
+                            )}
+
+                            {collapsed && (
+                                <div>
+                                    <i className="bi bi-list"></i> 
+                                </div>
+                            )}
+                        </div> */}
+
+                        {/* section */}
+                        <div className="bg-primary col-9 d-flex text-center">
+                            section
                         </div>
                     </div>
-                    {/* <!-- aside end --> */}
-
-                    {/* <!-- main section start --> */}
-                    <div className="col-8 ">
-                        <div className="text-black">
-
-                            this  is the main section
-                        </div>
-                    </div>
-                    {/* <!-- main section end --> */}
                 </div>
-
             </div>
             {/* <!-- main end --> */}
         </>
@@ -46,167 +230,4 @@ export default Sidebar;
 
 
 
-// import React, { useContext } from "react";
-// import { AdminContext } from "../../../context/adminLayoutContext";
-// import { AdminContext } from "../../../context/adminLayoutContext";
 
-// const SidebarLayout = () => {
-   
-//     const { showSidebar } = useContext(AdminContext);
-//     return (
-//         <section id="sidebar_section">
-//             <div classNameNameName={`mini_sidebar collapsedd bg-dark h-100 ${showSidebar ? "expanded" : null}`}>
-//                 <ul classNameName="p-0 m-0">
-//                     <li classNameName="pt-1 pb-2 d-flex flex-column avatar_li position-relative">
-//                         <span classNameName="avatar_box">
-//                             <img
-//                                 classNameName="w-100 rounded-circle"
-//                                 src="/assets/images/avatar/user2.jpg"
-//                             />
-//                         </span>
-//                         <div classNameName="sidebar_avatar_name text-center hiddenable">
-//                             قاسم بساکی
-//                         </div>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item mt-2 active"
-//                         data-section-id="dashboard_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-tachometer-alt text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">داشبورد</span>
-//                     </li>
-//                     {/* <!-- =================================== --> */}
-//                     <li classNameName="py-1 text-start d-flex justify-content-center no_pointer no_hover ">
-//                         <span classNameName="hiddenable no_wrap group_sidebar_title">
-//                             فروشگاه
-//                         </span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_product_category"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-stream text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">
-//                             مدیریت گروه محصول
-//                         </span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_product_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-cube text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">مدیریت محصول</span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_brand_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-copyright text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">مدیریت برند ها</span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_guarantee_section"
-//                     >
-//                         <i classNameName="ms-3 icon fab fa-pagelines text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">
-//                             مدیریت گارانتی ها
-//                         </span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_color_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-palette text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">مدیریت رنگ ها</span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_discount_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-percentage text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">مدیریت تخفیف ها</span>
-//                     </li>
-//                     {/* <!-- =================================== --> */}
-//                     <li classNameName="py-1 text-start d-flex justify-content-center no_pointer no_hover ">
-//                         <span classNameName="hiddenable no_wrap group_sidebar_title">
-//                             سفارشات و سبد
-//                         </span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_cart_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-shopping-basket text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">مدیریت سبد ها</span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_orders_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-luggage-cart text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">مدیریت سفارشات</span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_deliveries_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-truck-loading text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">
-//                             مدیریت نحوه ارسال
-//                         </span>
-//                     </li>
-//                     {/* <!-- =================================== --> */}
-//                     <li classNameName="py-1 text-start d-flex justify-content-center no_pointer no_hover ">
-//                         <span classNameName="hiddenable no_wrap group_sidebar_title ">
-//                             کاربران و همکاران
-//                         </span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_user_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-users text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">مشاهده کاربران</span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_role_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-user-tag text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">نقش ها</span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_permission_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-shield-alt text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">مجوز ها</span>
-//                     </li>
-//                     {/* <!-- =================================== --> */}
-//                     <li classNameName="py-1 text-start d-flex justify-content-center no_pointer no_hover ">
-//                         <span classNameName="hiddenable no_wrap group_sidebar_title ">
-//                             ارتباطات
-//                         </span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_question_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-question-circle text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">سوال ها</span>
-//                     </li>
-//                     <li
-//                         classNameName="py-1 text-start pe-4 sidebar_menu_item"
-//                         data-section-id="manage_comments_section"
-//                     >
-//                         <i classNameName="ms-3 icon fas fa-comment text-light"></i>
-//                         <span classNameName="hiddenable no_wrap font_08">نظرات</span>
-//                     </li>
-//                 </ul>
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default SidebarLayout;

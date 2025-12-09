@@ -4,7 +4,7 @@ const NavRightContent = () => {
     return (
         <>
             {/* <!-- top right start --> */}
-            <div className="bg-dark h-100 top_navbar_left_content d-flex justify-content-around col-4 col-md-2">
+            <div className="bg-dark top_navbar_left_content d-flex justify-content-between col-3">
                 <div id="logo">
                     <img src="/assets/img/logo.png" alt="logo" id="navbar_brand" className="h-100" />
                     {/* <img src="" alt="" /> */}

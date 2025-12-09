@@ -44,15 +44,12 @@ body {
 
 /* navbar start */
 .top_navbar{
-    height: 45px;
+    height: 60px;
+    line-height: 60px;
 }
 
 #navbar_brand{
     width: 60px;height: 40px;
-}
-
-.form-switch .form-check-input{
-    margin-top: 13px;
 }
 
 #navbar-brand{
@@ -66,6 +63,13 @@ body {
     -webkit-filter: drop-shadow(0 0 3px white);
 }
 /* navbar end */
+
+/* main start */
+#main {
+    /* background: lightgray; */
+    margin-top: 60px;
+}
+
 
 /* aside start */
 
@@ -156,11 +160,9 @@ body {
 
 
 /* aside end */
+/* main end */
 
-#main {
-    /* flex: 1; take the remaining space */
-    background: lightgray;
-}
+
 
 
 

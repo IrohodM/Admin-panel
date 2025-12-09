@@ -1,29 +1,26 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import Navbar from "./navbar/Navbar";
 import Sidebar from "./sidebar/Sidebar";
-import { ToggleSidebar } from "../../utils/InitialDoms";
-// import AdminContextContainer, { AdminContext } from "../../context/adminLayoutContext";
+import { CollapseProvider } from "../../context/CheckCollapseContext";
+// import { ToggleSidebar } from "../../utils/InitialDoms";
+
 
 
 const Admin = () => {
     // const { showSidebar } = useContext(AdminContext)
-    useEffect(() => {
-    // require('../../utils/InitialDoms')
-        ToggleSidebar();
-    }, [])
+    // useEffect(() => {
+    //     ToggleSidebar();
+    // }, [])
     return (
-        <>
+        // <>
+        //     <Navbar />
+        //     <Sidebar />
+        // </>
+        <CollapseProvider>
             <Navbar />
             <Sidebar />
-        </>
-        // <AdminContextContainer>
-        //     <div>
-        //         <Navbar />
-        //         <Sidebar />
-        //         <section id="content_section"
-        //             className={`bg-light py-2 px-3 ${showSidebar ? "with_sidebar" : null}`}></section>
-        //     </div>
-        // </AdminContextContainer>
+        </CollapseProvider>
+
     )
 }
 
