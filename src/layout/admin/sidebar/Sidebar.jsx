@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
 import { CollapseContext } from "../../../context/CheckCollapseContext";
+import SidebarGroupTitle from "./SideBarGroupTitle";
+import SidebarItem from "./SidebarItem";
+import SidebarItemCollapse from "./SidebarItemCollapse";
 // import { AdminContext } from "../../../context/adminLayoutContext";
 
 const Sidebar = () => {
 
-    const {collapse , toggleCollapse} = useContext(CollapseContext);
+    const { collapse, toggleCollapse } = useContext(CollapseContext);
     // const {showSidebar} = useContext(AdminContext)
     return (
         <>
-                    {/* <!-- main start --> */}
+            {/* <!-- main start --> */}
             <div id="main">
 
                 <div className=" container-fluid">
@@ -30,83 +33,30 @@ const Sidebar = () => {
                                 </li>
 
                                 {/* <!-- li part 2 --> */}
-                                <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
-                                    <span>فروشگاه</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-collection me-2"></i>
-                                    <span>مدیریت گروه محصول</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-box me-2"></i>
-                                    <span>مدیریت محصول</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-check-circle me-2"></i>
-                                    <span>مدیریت برند ها</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-flower1 me-2"></i>
-                                    <span>مدیریت گارانتی ها</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-palette me-2"></i>
-                                    <span>مدیریت رنگ ها</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-percent me-2"></i>
-                                    <span>مدیریت تخفیف ها</span>
-                                </li>
+                                <SidebarGroupTitle title="فروشگاه" />
+                                <SidebarItem icon="bi-collection" title="مدیریت گروه محصول" />
+                                <SidebarItem icon="bi-box" title="مدیریت محصول" />
+                                <SidebarItem icon="bi-check-circle" title="مدیریت برند ها" />
+                                <SidebarItem icon="bi-flower1" title="مدیریت گارنتی ها" />
+                                <SidebarItem icon="bi-palette" title="مدیریت رنگ ها" />
+                                <SidebarItem icon="bi-percent" title="مدیریت تخفیف ها" />
 
                                 {/* <!-- li part3 --> */}
-                                <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
-                                    <span>سفارشات و سبد ها</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-basket me-2"></i>
-                                    <span>مدیریت سبد ها</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-cart-check-fill me-2"></i>
-                                    <span>مدیریت سفارشات</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-truck me-2"></i>
-                                    <span>مدیریت نحوه ارسال</span>
-                                </li>
+                                <SidebarGroupTitle title="سفارشات و سبد ها" />
+                                <SidebarItem icon="bi-basket" title="مدیریت سبد ها" />
+                                <SidebarItem icon="bi-cart-check-fill" title="مدیریت سفارشات" />
+                                <SidebarItem icon="bi-truck" title="مدیریت نحوه ارسال" />
 
                                 {/* <!-- li part4 --> */}
-                                <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
-                                    <span>کاربران و همکاران</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-people me-2"></i>
-                                    <span>مشاهده کاربران</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-person-bounding-box me-2"></i>
-                                    <span>نقش ها</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-shield-fill-check me-2"></i>
-                                    <span>مجوز ها</span>
-                                </li>
+                                <SidebarGroupTitle title="کاربران و همکاران" />
+                                <SidebarItem icon="bi-people" title="مشاهده کاربران" />
+                                <SidebarItem icon="bi-person-bounding-box" title="نقش ها" />
+                                <SidebarItem icon="bi-shield-fill-check" title="مجوز ها" />
 
                                 {/* <!-- li part5 --> */}
-                                <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
-                                    <span>ارتباطات</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-question-diamond me-2"></i>
-                                    <span>سوال ها</span>
-                                </li>
-                                <li className="py-4 py-md-4 py-lg-3">
-                                    <i className="bi bi-chat-left-dots-fill me-2"></i>
-                                    <span>نظرات</span>
-                                </li>
-
-
-
+                                <SidebarGroupTitle title="ارتباطات" />
+                                <SidebarItem icon="bi-question-diamond" title="سوال ها" />
+                                <SidebarItem icon="bi-chat-left-dots-fill" title="نظرات" />
                             </ul>
                         </div>
 
@@ -125,66 +75,30 @@ const Sidebar = () => {
                                         </li>
 
                                         {/* <!-- li part 2 --> */}
-                                        <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
-                                            <span>       </span>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-collection"></i>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-box"></i>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-check-circle"></i>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-flower1"></i>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-palette"></i>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-percent"></i>
-                                        </li>
+                                        <SidebarGroupTitle title=" " />
+                                        <SidebarItemCollapse icon="bi-collection" />
+                                        <SidebarItemCollapse icon="bi-box" />
+                                        <SidebarItemCollapse icon="bi-check-circle" />
+                                        <SidebarItemCollapse icon="bi-flower1" />
+                                        <SidebarItemCollapse icon="bi-palette" />
+                                        <SidebarItemCollapse icon="bi-percent" />
 
                                         {/* <!-- li part3 --> */}
-                                        <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
-                                            <span>     </span>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-basket"></i>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-cart-check-fill"></i>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-truck"></i>
-                                        </li>
+                                        <SidebarGroupTitle title=" " />
+                                        <SidebarItemCollapse icon="bi-basket" />
+                                        <SidebarItemCollapse icon="bi-cart-check-fill" />
+                                        <SidebarItemCollapse icon="bi-truck" />
 
                                         {/* <!-- li part4 --> */}
-                                        <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
-                                            <span>      </span>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-people"></i>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-person-bounding-box"></i>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-shield-fill-check"></i>
-                                        </li>
+                                        <SidebarGroupTitle title=" " />
+                                        <SidebarItemCollapse icon="bi-people" />
+                                        <SidebarItemCollapse icon="bi-person-bounding-box" />
+                                        <SidebarItemCollapse icon="bi-shield-fill-check" />
 
                                         {/* <!-- li part5 --> */}
-                                        <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
-                                            <span>    </span>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-question-diamond"></i>
-                                        </li>
-                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
-                                            <i className="bi bi-chat-left-dots-fill"></i>
-                                        </li>
+                                        <SidebarGroupTitle title=" " />
+                                        <SidebarItemCollapse icon="bi-question-diamond"/>
+                                        <SidebarItemCollapse icon="bi-chat-left-dots-fill"/>
                                     </ul>
                                 </div>
                                 <div className="col-md-4 col-lg-4 ">
@@ -195,26 +109,6 @@ const Sidebar = () => {
 
 
                         <div className={collapse ? "col-2" : "d-none"}></div>
-                        {/* <div
-                            id="my_aside"
-                            className={`bg-warning d-flex flex-column ${collapsed ? "col-1" : "col-3"}`}
-                        >
-                            
-                            {!collapsed && (
-                                <>
-                                    <div>div1</div>
-                                    <div>div2</div>
-                                    <div>div3</div>
-                                    <div>div4</div>
-                                </>
-                            )}
-
-                            {collapsed && (
-                                <div>
-                                    <i className="bi bi-list"></i> 
-                                </div>
-                            )}
-                        </div> */}
 
                         {/* section */}
                         <div className="bg-primary col-9 d-flex text-center">
