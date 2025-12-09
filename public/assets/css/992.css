@@ -1,13 +1,18 @@
 @media(max-width:992px){
-    #navbar_brand {
+    /* #navbar_brand {
         width: 55px !important;
         height: 45px !important;
         margin-top: 3px;
-    }
+    } */
 
-    .form-switch .form-check-input {
+    /* .form-switch .form-check-input {
         width: 1.4rem;
         height: .9rem;
         margin-top: 17px !important;
-    }
+    } */
+
+    /* #profile_img_collapsed {
+        height: 35px !important;
+        width: 30px !important;
+    } */
 }

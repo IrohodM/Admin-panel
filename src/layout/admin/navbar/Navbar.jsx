@@ -21,9 +21,9 @@ const Navbar = () => {
                                     {/* <img src="" alt="" /> */}
                                 </div>
 
-                                <div className="text-center">
-                                    <div className="text-center form-check form-switch">
-                                        <input className="form-check-input" type="checkbox" role="switch" id="switchCheckDefault"
+                                <div className="">
+                                    <div className="form-check form-switch">
+                                        <input className="form-check-input pb-xl-0 mb-xl-0 mb-3" type="checkbox" role="switch" id="switchCheckDefault"
                                             checked={collapse} onChange={() => toggleCollapse()} />
                                     </div>
                                 </div>

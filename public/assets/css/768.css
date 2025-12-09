@@ -1,13 +1,13 @@
 @media(max-width: 768px){
-    #navbar_brand {
-        width: 50px !important;
-        height: 40px !important;
+    /* #navbar_brand {
+        width: 165px !important;
+        height: 95px !important;
         margin-top: 5px;
-    }
+    } */
 
-    .form-switch .form-check-input {
+    /* .form-switch .form-check-input {
         width: 1.5rem;
         height: .9rem;
         margin-top: 17px !important;
-    }
+    } */
 }

@@ -1,41 +1,42 @@
-@font-face{
-    font-family: "BYekan";
-    src: url("../fonts/yekan/BYekan-webfont.eot") format("eot"),
-        url("../fonts/yekan/BYekan-webfont.woff") format("woff"),
-        url("../fonts/yekan/BYekan-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: "BYekan";
+  src: url("../fonts/yekan/BYekan-webfont.eot") format("eot"),
+    url("../fonts/yekan/BYekan-webfont.woff") format("woff"),
+    url("../fonts/yekan/BYekan-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-*{
-    font-family: "BYekan";
-    direction: rtl;
-    text-align: right;
-    /* box-sizing: content-box */
+* {
+  font-family: "BYekan";
+  direction: rtl;
+  text-align: right;
+  /* box-sizing: content-box */
 }
 
 body {
   margin: 0;
-  display: block; /* not flex */
+  display: block;
+  /* not flex */
   min-height: 100vh;
 }
 
 
 /* general start */
-.cursor-pointer{
-    cursor: pointer;
+.cursor-pointer {
+  cursor: pointer;
 }
 
-.w-15{
-    width: 15%;
+.w-15 {
+  width: 15%;
 }
 
 /* body{
     display: flex;
 } */
 
-.text_center{
-    text-align: center !important;
+.text_center {
+  text-align: center !important;
 }
 
 
@@ -43,31 +44,36 @@ body {
 /* general end */
 
 /* navbar start */
-.top_navbar{
-    height: 60px;
-    line-height: 60px;
+.top_navbar {
+  height: 60px;
+  line-height: 60px;
 }
 
-#navbar_brand{
-    width: 60px;height: 40px;
+#navbar_brand {
+  width: 75px;
+  height: 50px;
 }
 
-#navbar-brand{
-    transition: var(--transition_300);
-    filter: drop-shadow(0 0 6px white);
-    -webkit-filter: drop-shadow(0 0 6px white);
+#navbar-brand {
+  transition: var(--transition_300);
+  filter: drop-shadow(0 0 6px white);
+  -webkit-filter: drop-shadow(0 0 6px white);
 }
 
-#navbar-brand:hover{
-    filter: drop-shadow(0 0 3px white);
-    -webkit-filter: drop-shadow(0 0 3px white);
+#navbar-brand:hover {
+  filter: drop-shadow(0 0 3px white);
+  -webkit-filter: drop-shadow(0 0 3px white);
 }
+
+/* .form-switch .form-check-input{
+
+} */
 /* navbar end */
 
 /* main start */
 #main {
-    /* background: lightgray; */
-    margin-top: 60px;
+  /* background: lightgray; */
+  margin-top: 60px;
 }
 
 
@@ -79,13 +85,19 @@ body {
 
 .mini_sidebar {
   font-size: .7rem;
-  display: block; /* remove flex centering */
+  display: block;
+  /* remove flex centering */
 }
 
 
-#profile_img{
-    height: 60px;
-    width: 60px !important;
+#profile_img {
+  height: 60px;
+  width: 60px !important;
+}
+
+#profile_img_collapsed {
+  height: 40px;
+  width: 40px;
 }
 
 #sidebar_section {
@@ -96,32 +108,35 @@ body {
 }
 
 #sidebar_section.collapsed {
-  width: 100px; /* narrow sidebar */
+  width: 100px;
+  /* narrow sidebar */
 }
 
 #sidebar_section.collapsed span {
-  display: none; /* hide text labels */
+  display: none;
+  /* hide text labels */
 }
 
 #sidebar_section.collapsed img {
-  width: 60px; /* shrink profile image if needed */
+  width: 60px;
+  /* shrink profile image if needed */
   height: 60px;
   /* margin-top: 60px; */
 }
 
-#sidebar_section ul #li_1{
-    padding-top: 45px;
+#sidebar_section ul #li_1 {
+  padding-top: 45px;
 }
 
-#sidebar_section.collapsed ul #li_1{
-    padding-top: 45px;
-    color: red;
+#sidebar_section.collapsed ul #li_1 {
+  padding-top: 45px;
+  color: red;
 }
 
 #sidebar_section ul li {
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   height: 15px;
   cursor: pointer;
   /* height: 25px; */
@@ -129,10 +144,10 @@ body {
   /* transition: background 0.3s, color 0.3s; */
 }
 
-#sidebar_section li:hover{
-    background-color: black;
-    border-bottom: 3px red solid;
-    border-radius: 9px;
+#sidebar_section li:hover {
+  background-color: black;
+  border-bottom: 3px red solid;
+  border-radius: 9px;
 }
 
 #sidebar_section ul li.no_hover:hover {
@@ -143,12 +158,14 @@ body {
 }
 
 #sidebar_section.collapsed ul li {
-  justify-content: center; /* center icons when collapsed */
+  justify-content: center;
+  /* center icons when collapsed */
   height: 15px;
 }
 
 #sidebar_section ul li i {
-  width: 30px; /* fixed icon area */
+  width: 30px;
+  /* fixed icon area */
   text-align: center;
 }
 
@@ -161,13 +178,3 @@ body {
 
 /* aside end */
 /* main end */
-
-
-
-
-
-
-
-
-
-

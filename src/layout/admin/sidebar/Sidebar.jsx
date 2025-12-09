@@ -15,10 +15,11 @@ const Sidebar = () => {
 
                     <div className="row">
                         {/* aside */}
-                        {/* <div className="bg-warning col-3 d-flex flex-column" id="my_aside"> */}
-                        <div id="my_aside" className={`bg-warning d-flex flex-column ${collapse ? "d-none" : "col-3"}`}>
-                            <ul className="p-0 m-0 mt-5 list-unstyled text-white">
-                                <li className="d-flex flex-column justify-content-center align-items-center no_hover pb-5">
+
+                        {/* aside without collapse */}
+                        <div id="my_aside" className={`bg-dark d-flex flex-column ${collapse ? "d-none" : "col-3"}`}>
+                            <ul className="p-0 m-0 mt-2 list-unstyled text-white">
+                                <li className="d-flex flex-column justify-content-center align-items-center no_hover pb-3">
                                     <img src="/assets/img/face.png" alt="" className="rounded-circle border border-3"
                                         id="profile_img" />
                                     <span>امیرمحمد محسنی</span>
@@ -109,83 +110,84 @@ const Sidebar = () => {
                             </ul>
                         </div>
 
-                        <div id="my_aside_collapsed" className={`bg-warning d-flex flex-column ${collapse ? "col-1" : "d-none"}`}>
+                        {/* aside with collapse */}
+                        <div id="my_aside_collapsed" className={`d-flex flex-column ${collapse ? "col-1" : "d-none"}`}>
                             <div className="row">
-                                <div className="col-8">
-                                    <ul className="p-0 m-0 mt-5 text-center list-unstyled text-white">
-                                        <li className="d-flex flex-column justify-content-center align-items-center no_hover pb-5">
+                                <div className="col-12 col-md-8 col-lg-8 bg-dark">
+                                    <ul className="p-0 m-0 mt-2 text-center list-unstyled text-white">
+                                        <li className="d-flex flex-column justify-content-center align-items-center no_hover pb-3">
                                             <img src="/assets/img/face.png" alt="" className="rounded-circle border border-3"
-                                                id="profile_img" />
-                                            <span>امیرمحمد محسنی</span>
+                                                id="profile_img_collapsed" />
+                                            <span className="text-center"></span>
                                         </li>
-                                        <li className="py-4 pb-2" id="li_1">
-                                            <i className="bi bi-speedometer me-2"></i>
+                                        <li className="py-4 pb-2  d-flex justify-content-center" id="li_1">
+                                            <i className="bi bi-speedometer"></i>
                                         </li>
 
                                         {/* <!-- li part 2 --> */}
                                         <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
                                             <span>       </span>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-collection me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-collection"></i>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-box me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-box"></i>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-check-circle me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-check-circle"></i>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-flower1 me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-flower1"></i>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-palette me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-palette"></i>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-percent me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-percent"></i>
                                         </li>
 
                                         {/* <!-- li part3 --> */}
                                         <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
                                             <span>     </span>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-basket me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-basket"></i>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-cart-check-fill me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-cart-check-fill"></i>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-truck me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-truck"></i>
                                         </li>
 
                                         {/* <!-- li part4 --> */}
                                         <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
                                             <span>      </span>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-people me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-people"></i>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-person-bounding-box me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-person-bounding-box"></i>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-shield-fill-check me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-shield-fill-check"></i>
                                         </li>
 
                                         {/* <!-- li part5 --> */}
                                         <li className="d-flex justify-content-center pt-4 pb-3 text-primary no_hover">
                                             <span>    </span>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-question-diamond me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-question-diamond"></i>
                                         </li>
-                                        <li className="py-4 py-md-4 py-lg-3">
-                                            <i className="bi bi-chat-left-dots-fill me-2"></i>
+                                        <li className="py-4 py-md-4 py-lg-3 d-flex justify-content-center">
+                                            <i className="bi bi-chat-left-dots-fill"></i>
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="col-4 bg-danger">
+                                <div className="col-md-4 col-lg-4 ">
                                 </div>
                             </div>
 
