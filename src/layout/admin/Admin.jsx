@@ -12,10 +12,6 @@ const Admin = () => {
     //     ToggleSidebar();
     // }, [])
     return (
-        // <>
-        //     <Navbar />
-        //     <Sidebar />
-        // </>
         <CollapseProvider>
             <Navbar />
             <Sidebar />

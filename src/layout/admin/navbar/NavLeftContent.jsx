@@ -4,7 +4,7 @@ const NavLeftContent = () => {
     return (
         <>
             {/* <!-- top left start  --> */}
-            <div className="col-8 col-md-10">
+            <div className="col-9 bg-secondary">
                 <div className="d-flex justify-content-end">
                     <div className="pe-3 cursor-pointer">
                         <i className="bi bi-search"></i>

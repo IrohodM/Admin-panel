@@ -3,12 +3,10 @@ import { CollapseContext } from "../../../context/CheckCollapseContext";
 import SidebarGroupTitle from "./SideBarGroupTitle";
 import SidebarItem from "./SidebarItem";
 import SidebarItemCollapse from "./SidebarItemCollapse";
-// import { AdminContext } from "../../../context/adminLayoutContext";
 
 const Sidebar = () => {
 
     const { collapse, toggleCollapse } = useContext(CollapseContext);
-    // const {showSidebar} = useContext(AdminContext)
     return (
         <>
             {/* <!-- main start --> */}
@@ -17,7 +15,7 @@ const Sidebar = () => {
                 <div className=" container-fluid">
 
                     <div className="row">
-                        {/* aside */}
+                        {/* aside start*/}
 
                         {/* aside without collapse */}
                         <div id="my_aside" className={`bg-dark d-flex flex-column ${collapse ? "d-none" : "col-3"}`}>
@@ -106,13 +104,12 @@ const Sidebar = () => {
                             </div>
 
                         </div>
-
-
                         <div className={collapse ? "col-2" : "d-none"}></div>
+                        {/* aside start*/}
 
                         {/* section */}
-                        <div className="bg-primary col-9 d-flex text-center">
-                            section
+                        <div className="col-9 d-flex text-center">
+                            
                         </div>
                     </div>
                 </div>
