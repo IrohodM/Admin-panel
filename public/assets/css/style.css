@@ -76,19 +76,12 @@ body {
   margin-top: 60px;
 }
 
-
 /* aside start */
-
-/* .mini_sidebar{
-    font-size: .7rem;
-} */
-
 .mini_sidebar {
   font-size: .7rem;
   display: block;
   /* remove flex centering */
 }
-
 
 #profile_img {
   height: 60px;
@@ -169,12 +162,37 @@ body {
   text-align: center;
 }
 
-/* #sidebar_section {
-  height: 100vh; 
-} */
-
-
-
-
 /* aside end */
+
 /* main end */
+
+/* dashboard start */
+.dashboard_card_parent:nth-child(1) .dashboard_card {
+  background: hsla(33, 100%, 53%, 1);
+  background: linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FF930F", endColorstr="#FFF95B", GradientType=1);
+}
+
+.dashboard_card_parent:nth-child(2) .dashboard_card {
+  background: hsla(332, 75%, 76%, 1);
+  background: linear-gradient(90deg, hsla(332, 75%, 76%, 1) 0%, hsla(0, 83%, 70%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(332, 75%, 76%, 1) 0%, hsla(0, 83%, 70%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F096C0", endColorstr="#F27575", GradientType=1);
+}
+
+.dashboard_card_parent:nth-child(3) .dashboard_card {
+  background: hsla(152, 100%, 50%, 1);
+  background: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#00FF87", endColorstr="#60EFFF", GradientType=1);
+}
+
+.dashboard_card_parent:nth-child(4) .dashboard_card {
+  background: hsla(217, 100%, 50%, 1);
+  background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1);
+}
+
+/* dashboard end */
