@@ -3,6 +3,7 @@ import Navbar from "./navbar/Navbar";
 import Sidebar from "./sidebar/Sidebar";
 import { CollapseProvider } from "../../context/CheckCollapseContext";
 import Dashboard from "../../pages/dashboard/Dashboard"
+import Category from "../../pages/category/Category";
 // import { ToggleSidebar } from "../../utils/InitialDoms";
 
 
@@ -19,7 +20,8 @@ const Admin = () => {
                 <div className=" container-fluid">
                     <div className="row">
                         <Sidebar />
-                        <Dashboard/>
+                        {/* <Dashboard/> */}
+                        <Category/>
                     </div>
                 </div>
             </div>
