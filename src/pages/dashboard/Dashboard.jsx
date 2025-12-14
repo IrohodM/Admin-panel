@@ -1,13 +1,15 @@
 import React from "react";
 import DashboardChart from "../../utils/DashboardChart"
+import DashboardCards from "./DashboardCards";
 
 const Dashboard = () => {
-   
+
     return (
         <div className="col-9 text-center" id="Dashboard">
             {/* cards start */}
             <div className="row">
-                <div className="col-12 col-md-6 col-lg-3 p-2 dashboard_card_parent">
+
+                {/* <div className="col-12 col-md-6 col-lg-3 p-2 dashboard_card_parent">
                     <div className="dashboard_card rounded py-2 ">
                         <div className="card-body row">
                             <div className="col-10">
@@ -30,8 +32,17 @@ const Dashboard = () => {
                             </small>
                         </div>
                     </div>
-                </div>
-                <div className="col-12 col-md-6 col-lg-3 p-2 dashboard_card_parent">
+                </div> */}
+                <DashboardCards
+                    currentValue={12}
+                    title="سبد خرید امروز"
+                    desc="سبد های خرید مانده امروز"
+                    icon="fas bi-basket3"
+                    lastWeekValue={13}
+                    lastMonthValue={18}
+                />
+
+                {/* <div className="col-12 col-md-6 col-lg-3 p-2 dashboard_card_parent">
                     <div className="dashboard_card rounded py-2 ">
                         <div className="card-body row">
                             <div className="col-10">
@@ -54,8 +65,17 @@ const Dashboard = () => {
                             </small>
                         </div>
                     </div>
-                </div>
-                <div className="col-12 col-md-6 col-lg-3 p-2 dashboard_card_parent">
+                </div> */}
+                <DashboardCards
+                    currentValue={39}
+                    title="سفارشات مانده امروز"
+                    desc=" سفارشات معلق و فاقد پرداختی"
+                    icon="bi-minecart-loaded"
+                    lastWeekValue={30}
+                    lastMonthValue={24}
+                />
+
+                {/* <div className="col-12 col-md-6 col-lg-3 p-2 dashboard_card_parent">
                     <div className="dashboard_card rounded py-2 ">
                         <div className="card-body row">
                             <div className="col-10">
@@ -78,8 +98,17 @@ const Dashboard = () => {
                             </small>
                         </div>
                     </div>
-                </div>
-                <div className="col-12 col-md-6 col-lg-3 p-2 dashboard_card_parent">
+                </div> */}
+                <DashboardCards
+                    currentValue={72}
+                    title="سفارشات امروز"
+                    desc="سفارشات کامل و دارای پرداختی"
+                    icon="bi bi-cart-fill"
+                    lastWeekValue={134}
+                    lastMonthValue={254}
+                />
+
+                {/* <div className="col-12 col-md-6 col-lg-3 p-2 dashboard_card_parent">
                     <div className="dashboard_card rounded py-2 ">
                         <div className="card-body row">
                             <div className="col-10">
@@ -102,7 +131,16 @@ const Dashboard = () => {
                             </small>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                <DashboardCards
+                    currentValue={"7,578,000"}
+                    title="درآمد امروز"
+                    desc="جمع مبالغ پرداختی (تومان)"
+                    icon="fas fa-money-check-alt"
+                    lastWeekValue={"53,380,000"}
+                    lastMonthValue={"321,380,000"}
+                />
+
             </div>
             {/* cards end */}
 
@@ -194,7 +232,7 @@ const Dashboard = () => {
                 {/* chart start */}
                 <div className="col-12 col-lg-6">
                     <h5 className="mb-3 text-center">نمودار فروش 1 سال گذشته</h5>
-                    <DashboardChart/>
+                    <DashboardChart />
                 </div>
                 {/* chart end */}
 
