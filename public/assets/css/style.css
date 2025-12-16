@@ -31,9 +31,9 @@ body {
   width: 15%;
 }
 
-/* body{
-    display: flex;
-} */
+.w_6rem{
+    width: 6rem !important;
+}
 
 .text_center {
   text-align: center !important;
