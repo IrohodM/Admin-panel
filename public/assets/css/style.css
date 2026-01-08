@@ -31,14 +31,40 @@ body {
   width: 15%;
 }
 
-.w_6rem{
-    width: 6rem !important;
+.w_6rem {
+  width: 6rem !important;
 }
 
 .text_center {
   text-align: center !important;
 }
 
+.chips_elem {
+  background: #bde7db;
+  border-radius: 5rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: 3px;
+  white-space: nowrap;
+}
+
+.chips_elem i {
+  position: relative;
+  top: 2px;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.color_tag {
+  border: 1px solid black;
+}
+
+.hoverable_text {
+  transition: all 200ms ease;
+}
+
+.hoverable_text:hover {
+  text-shadow: 0 0 3px black;
+}
 
 
 /* general end */

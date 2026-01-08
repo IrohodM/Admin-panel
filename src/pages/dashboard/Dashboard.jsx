@@ -1,11 +1,13 @@
-import React from "react";
+import React , { useContext } from "react";
 import DashboardChart from "../../utils/DashboardChart"
 import DashboardCards from "./DashboardCards";
+import { CollapseContext } from "../../context/CheckCollapseContext";
 
 const Dashboard = () => {
+    const { collapse, toggleCollapse } = useContext(CollapseContext);
 
     return (
-        <div className="col-9 text-center" id="Dashboard">
+        <div className={`${collapse ? "col-11" : "col-9"} text-center`} id="Dashboard">
             {/* cards start */}
             <div className="row">
 

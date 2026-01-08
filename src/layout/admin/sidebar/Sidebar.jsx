@@ -99,7 +99,7 @@ const Sidebar = () => {
 
             </div>
 
-            <div className={collapse ? "col-2" : "d-none"}></div>
+            {/* <div className={collapse ? "col-2" : "d-none"}></div> */}
             {/* aside end*/}
 
         </>

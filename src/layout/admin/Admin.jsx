@@ -4,6 +4,7 @@ import Sidebar from "./sidebar/Sidebar";
 import { CollapseProvider } from "../../context/CheckCollapseContext";
 import Dashboard from "../../pages/dashboard/Dashboard"
 import Category from "../../pages/category/Category";
+import Product from "../../pages/product/Product";
 // import { ToggleSidebar } from "../../utils/InitialDoms";
 
 
@@ -21,7 +22,8 @@ const Admin = () => {
                     <div className="row">
                         <Sidebar />
                         {/* <Dashboard/> */}
-                        <Category/>
+                        {/* <Category/> */}
+                        <Product/>
                     </div>
                 </div>
             </div>
