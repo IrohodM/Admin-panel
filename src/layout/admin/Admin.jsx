@@ -22,8 +22,8 @@ const Admin = () => {
                     <div className="row">
                         <Sidebar />
                         {/* <Dashboard/> */}
-                        {/* <Category/> */}
-                        <Product/>
+                        <Category/>
+                        {/* <Product/> */}
                     </div>
                 </div>
             </div>

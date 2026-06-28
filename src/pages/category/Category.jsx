@@ -29,7 +29,7 @@ const Category = () => {
             <CategoryTable />
 
             {/* pagenaiton */}
-            <CategoryPagenation />
+            {/* <CategoryPagenation /> */}
 
             {/* Add Category */}
             <AddCategory />
