@@ -12,7 +12,7 @@ const Category = () => {
             <h3 className='text-center mt-4'>مدیریت دسته بندی محصولات</h3>
 
             {/* search and added buttom */}
-            <div className='row justify-content-between align-items-center'>
+            {/* <div className='row justify-content-between align-items-center'>
                 <div className='col-6'>
                     <div className="input-group mb-3">
                         <span className="input-group-text cursor-pointer" id="basic-addon1">جستوجو</span>
@@ -23,7 +23,7 @@ const Category = () => {
                     <i className="bi bi-plus-square-fill text-success fs-2 cursor-pointer" data-bs-toggle="modal"
                         data-bs-target="#add_product_category_modal"></i>
                 </div>
-            </div>
+            </div> */}
 
             {/* table */}
             <CategoryTable />
@@ -32,7 +32,7 @@ const Category = () => {
             {/* <CategoryPagenation /> */}
 
             {/* Add Category */}
-            <AddCategory />
+            {/* <AddCategory /> */}
 
         </div>
     );

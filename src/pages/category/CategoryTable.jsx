@@ -1,5 +1,6 @@
 import React from 'react';
 import PaginatedTable from '../../component/PaginatedTable';
+import AddCategory from './AddCategory';
 
 const CategoryTable = () => {
     const data = [
@@ -24,8 +25,8 @@ const CategoryTable = () => {
         {
             id: "3",
             category: "ccc",
-            title: "ddd",
-            price: "2222",
+            title: "eee",
+            price: "3333",
             stock: "7",
             like_count: "2",
             status: "1",
@@ -33,8 +34,8 @@ const CategoryTable = () => {
         {
             id: "4",
             category: "ccc",
-            title: "ddd",
-            price: "2222",
+            title: "fff",
+            price: "4444",
             stock: "7",
             like_count: "2",
             status: "1",
@@ -42,8 +43,8 @@ const CategoryTable = () => {
         {
             id: "5",
             category: "ccc",
-            title: "ddd",
-            price: "2222",
+            title: "ggg",
+            price: "555",
             stock: "7",
             like_count: "2",
             status: "1",
@@ -55,6 +56,13 @@ const CategoryTable = () => {
         { field: "title", title: "عنوان محصول" },
         { field: "price", title: "قیمت محصول" },
     ]
+
+    const searchParams = {
+        title: "جستجو",
+        placeholder: "قسمتی از عنوان را وارد کنید",
+        searchField: "title"
+    }
+
 
     const additionalElements = (itemId) => {
         return (
@@ -93,124 +101,130 @@ const CategoryTable = () => {
         elements: (itemId) => additionalElements(itemId),
     };
 
+
+
     return (
         <>
-            <PaginatedTable data={data} dataInfo={dataInfo} additionField={additionField} />
+            <PaginatedTable data={data} dataInfo={dataInfo} additionField={additionField} searchParams={searchParams} numOfPage={7}>
+                <AddCategory />
+            </PaginatedTable>
         </>
 
-        // <>
-        //     <div className="row p-2">
-        //         <table className="table table-bordered table-striped">
-        //             <thead>
-        //                 <tr>
-        //                     <th scope="col">#</th>
-        //                     <th scope="col" className='text-center'>عنوان</th>
-        //                     <th scope="col" className='text-center'>وضعیت</th>
-        //                     <th scope="col" className='text-center'>عملیات</th>
-        //                 </tr>
-        //             </thead>
-        //             <tbody>
-        //                 <tr>
-        //                     <th scope="row">1</th>
-        //                     <td className='text-center' >Mark</td>
-        //                     <td className='text-center' >فعال</td>
-        //                     <td className='text-center' >
-        //                         <i
-        //                             className="bi bi-diagram-3 text-info mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="زیرمجموعه"
-        //                             data-bs-toggle="tooltip"
-        //                             data-bs-placement="top"
-        //                         ></i>
-        //                         <i
-        //                             className="bi bi-pencil-square text-warning mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="ویرایش دسته"
-        //                             data-bs-toggle="tooltip"
-        //                             data-bs-placement="top"
-        //                         ></i>
-        //                         <i
-        //                             className="bi bi-plus text-success mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="افزودن ویژگی"
-        //                             data-bs-placement="top"
-        //                             data-bs-toggle="modal"
-        //                             data-bs-target="#add_product_category_attr_modal"
-        //                         ></i>
-        //                         <i
-        //                             className="bi bi-dash text-danger mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="حذف دسته"
-        //                             data-bs-toggle="tooltip"
-        //                             data-bs-placement="top"
-        //                         ></i>
-        //                     </td>
-        //                 </tr>
-        //                 <tr>
-        //                     <th scope="row">2</th>
-        //                     <td className='text-center'>Jacob</td>
-        //                     <td className='text-center'>فعال</td>
-        //                     <td className='text-center'>
-        //                         <i
-        //                             className="bi bi-diagram-3 text-info mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="زیرمجموعه"
-        //                             data-bs-toggle="tooltip"
-        //                             data-bs-placement="top"
-        //                         ></i>
-        //                         <i
-        //                             className="bi bi-pencil-square text-warning mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="ویرایش دسته"
-        //                             data-bs-toggle="tooltip"
-        //                             data-bs-placement="top"
-        //                         ></i>
-        //                         <i
-        //                             className="bi bi-plus text-success mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="افزودن ویژگی"
-        //                             data-bs-placement="top"
-        //                             data-bs-toggle="modal"
-        //                             data-bs-target="#add_product_category_attr_modal"
-        //                         ></i>
-        //                         <i
-        //                             className="bi bi-dash text-danger mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="حذف دسته"
-        //                             data-bs-toggle="tooltip"
-        //                             data-bs-placement="top"
-        //                         ></i>
-        //                     </td>
-        //                 </tr>
-        //                 <tr>
-        //                     <th scope="row">3</th>
-        //                     <td className='text-center'>John</td>
-        //                     <td className='text-center'>فعال</td>
-        //                     <td className='text-center'>
-        //                         <i
-        //                             className="bi bi-diagram-3 text-info mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="زیرمجموعه"
-        //                             data-bs-toggle="tooltip"
-        //                             data-bs-placement="top"
-        //                         ></i>
-        //                         <i
-        //                             className="bi bi-pencil-square text-warning mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="ویرایش دسته"
-        //                             data-bs-toggle="tooltip"
-        //                             data-bs-placement="top"
-        //                         ></i>
-        //                         <i
-        //                             className="bi bi-plus text-success mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="افزودن ویژگی"
-        //                             data-bs-placement="top"
-        //                             data-bs-toggle="modal"
-        //                             data-bs-target="#add_product_category_attr_modal"
-        //                         ></i>
-        //                         <i
-        //                             className="bi bi-dash text-danger mx-1 hoverable_text cursor-pointer has_tooltip"
-        //                             title="حذف دسته"
-        //                             data-bs-toggle="tooltip"
-        //                             data-bs-placement="top"
-        //                         ></i>
-        //                     </td>
-        //                 </tr>
-        //             </tbody>
-        //         </table>
-        //     </div>
-        // </>
+
     );
 }
 
 export default CategoryTable;
+
+// <>
+//     <div className="row p-2">
+//         <table className="table table-bordered table-striped">
+//             <thead>
+//                 <tr>
+//                     <th scope="col">#</th>
+//                     <th scope="col" className='text-center'>عنوان</th>
+//                     <th scope="col" className='text-center'>وضعیت</th>
+//                     <th scope="col" className='text-center'>عملیات</th>
+//                 </tr>
+//             </thead>
+//             <tbody>
+//                 <tr>
+//                     <th scope="row">1</th>
+//                     <td className='text-center' >Mark</td>
+//                     <td className='text-center' >فعال</td>
+//                     <td className='text-center' >
+//                         <i
+//                             className="bi bi-diagram-3 text-info mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="زیرمجموعه"
+//                             data-bs-toggle="tooltip"
+//                             data-bs-placement="top"
+//                         ></i>
+//                         <i
+//                             className="bi bi-pencil-square text-warning mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="ویرایش دسته"
+//                             data-bs-toggle="tooltip"
+//                             data-bs-placement="top"
+//                         ></i>
+//                         <i
+//                             className="bi bi-plus text-success mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="افزودن ویژگی"
+//                             data-bs-placement="top"
+//                             data-bs-toggle="modal"
+//                             data-bs-target="#add_product_category_attr_modal"
+//                         ></i>
+//                         <i
+//                             className="bi bi-dash text-danger mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="حذف دسته"
+//                             data-bs-toggle="tooltip"
+//                             data-bs-placement="top"
+//                         ></i>
+//                     </td>
+//                 </tr>
+//                 <tr>
+//                     <th scope="row">2</th>
+//                     <td className='text-center'>Jacob</td>
+//                     <td className='text-center'>فعال</td>
+//                     <td className='text-center'>
+//                         <i
+//                             className="bi bi-diagram-3 text-info mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="زیرمجموعه"
+//                             data-bs-toggle="tooltip"
+//                             data-bs-placement="top"
+//                         ></i>
+//                         <i
+//                             className="bi bi-pencil-square text-warning mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="ویرایش دسته"
+//                             data-bs-toggle="tooltip"
+//                             data-bs-placement="top"
+//                         ></i>
+//                         <i
+//                             className="bi bi-plus text-success mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="افزودن ویژگی"
+//                             data-bs-placement="top"
+//                             data-bs-toggle="modal"
+//                             data-bs-target="#add_product_category_attr_modal"
+//                         ></i>
+//                         <i
+//                             className="bi bi-dash text-danger mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="حذف دسته"
+//                             data-bs-toggle="tooltip"
+//                             data-bs-placement="top"
+//                         ></i>
+//                     </td>
+//                 </tr>
+//                 <tr>
+//                     <th scope="row">3</th>
+//                     <td className='text-center'>John</td>
+//                     <td className='text-center'>فعال</td>
+//                     <td className='text-center'>
+//                         <i
+//                             className="bi bi-diagram-3 text-info mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="زیرمجموعه"
+//                             data-bs-toggle="tooltip"
+//                             data-bs-placement="top"
+//                         ></i>
+//                         <i
+//                             className="bi bi-pencil-square text-warning mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="ویرایش دسته"
+//                             data-bs-toggle="tooltip"
+//                             data-bs-placement="top"
+//                         ></i>
+//                         <i
+//                             className="bi bi-plus text-success mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="افزودن ویژگی"
+//                             data-bs-placement="top"
+//                             data-bs-toggle="modal"
+//                             data-bs-target="#add_product_category_attr_modal"
+//                         ></i>
+//                         <i
+//                             className="bi bi-dash text-danger mx-1 hoverable_text cursor-pointer has_tooltip"
+//                             title="حذف دسته"
+//                             data-bs-toggle="tooltip"
+//                             data-bs-placement="top"
+//                         ></i>
+//                     </td>
+//                 </tr>
+//             </tbody>
+//         </table>
+//     </div>
+// </>
